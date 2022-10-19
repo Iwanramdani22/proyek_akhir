@@ -34,3 +34,7 @@ Route::get('/nama/{nrp}/{nama}', function ($nrp, $nama) {
     echo "<br>";
     echo "nama : ". $nama; 
 })->where('nrp', '[0-9]+')->where('nama','[A-Za-z]+');
+
+route::get('/person', 'PersonController@index');
+route::get('/person/show/{param}', 'PersonController@show');
+route::resource('student','StudentController');
