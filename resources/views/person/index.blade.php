@@ -3,11 +3,11 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            Dashboard
+            Person
         </div>
 
         <div class="card-body">
-            Selamat Dadang !!!
+            <h1>Ini View Index</h1>
         </div>
     </div>
 @endsection

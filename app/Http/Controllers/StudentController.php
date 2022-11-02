@@ -11,6 +11,7 @@ class StudentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         return "ini apah ?";
@@ -23,7 +24,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        return "yaudah !!";
+        // 
     }
 
     /**

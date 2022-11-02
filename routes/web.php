@@ -35,6 +35,16 @@ Route::get('/nama/{nrp}/{nama}', function ($nrp, $nama) {
     echo "nama : ". $nama; 
 })->where('nrp', '[0-9]+')->where('nama','[A-Za-z]+');
 
-route::get('/person', 'PersonController@index');
 route::get('/person/show/{param}', 'PersonController@show');
 route::resource('student','StudentController');
+
+route::get('/homepage', function() {
+    return view('home', ["name" => "Iwan Ramdani"]);
+});
+
+route::get('/person/send-data/', 'PersonController@sendData');
+route::get('/person/data', 'PersonController@data');
+route::get('/person/grade/{task}/{quiz}/{midterm}/{final}/{grade}', 'PersonController@myCourse');
+
+// Sesi 5
+route::get('/person', 'PersonController@index')->name('person.index');
