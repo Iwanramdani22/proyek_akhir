@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,3 +49,10 @@ route::get('/person/grade/{task}/{quiz}/{midterm}/{final}/{grade}', 'PersonContr
 
 // Sesi 5
 route::get('/person', 'PersonController@index')->name('person.index');
+
+Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();
+
+// Sesi 6
+route::get('person/create', 'PersonController@create')->name('person.create');
+route::post('person/store', 'PersonController@store')->name('person.store');

@@ -1,13 +1,14 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="card" style="margin-top: 20px">
+    <div class="card my-2">
         <div class="card-header">
-            Dashboard
+            Data Person
         </div>
 
         <div class="card-body">
-            Selamat Dadang !!!
+            <p>Nama Anda {{ $person->name }}</p>
+            <p>email Anda {{ $person->email }}</p>
         </div>
     </div>
 @endsection

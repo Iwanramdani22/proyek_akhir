@@ -56,4 +56,18 @@ class PersonController extends Controller
 
         return view("person.data", ['names' => $names]);
     }
+
+    // Sesi 6
+    public function create() {
+        return view('person.create');
+    }
+
+    public function store(Request $request) {
+        $this->validate($request, [
+            'name' => 'required|max:30',
+            'email' => 'required|email'
+        ]);
+        $person = $request;
+        return view('person.print', compact('person'));
+    }
 }
